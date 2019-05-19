@@ -1,0 +1,29 @@
+
+
+<table>
+  <tr>
+    <td>
+
+     {{ poll.question }}
+     <hr/>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+  <ul class="list-group" *ngFor="let choice of poll.choices">
+      <li>
+        <div class="choice_box" (click)="savePoll(choice)">
+          {{ choice.text }}
+        </div>
+      </li>
+      <br>
+  </ul>
+  </td>
+  </tr>
+</table>
+
+
+
+<!-- <p class="text-right"><span class="badge badge-secondary"> Last Update: {{ (lastUpdate | async) | date:'mediumTime' }}</span></p> -->
+<!-- <button class="btn btn-primary" ()">Delete Poll </button> -->
